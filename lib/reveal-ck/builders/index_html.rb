@@ -35,7 +35,7 @@ module RevealCK
       def remove_default_content(file)
         add_task 'Slicing out reveal.js default slides' do
           begin_line_num = 38 # Line where I see <div class="slides">
-          end_line_num = 346 # Closing <div>
+          end_line_num = 351 # Closing <div>
           default_slides = begin_line_num..end_line_num
           Changers::Slicer.remove! file, default_slides
         end
